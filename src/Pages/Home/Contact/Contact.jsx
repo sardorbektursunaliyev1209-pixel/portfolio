@@ -160,8 +160,7 @@ function Contact() {
               >
                 Xabar yuborish
               </button>
-
-              {sent && (
+    {sent && (
                 <p className="text-center text-sm text-green-400">
                   Xabaringiz qabul qilindi, rahmat!
                 </p>
