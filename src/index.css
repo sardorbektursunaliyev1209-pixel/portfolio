@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-15px); }
+}
+
+@keyframes ripple {
+  0%   { transform: scale(0.7); opacity: 1; }
+  100% { transform: scale(1.15); opacity: 0; }
+}
+
+.float-anim {
+  animation: float 4s ease-in-out infinite;
+}
+
+.ripple-anim {
+  animation: ripple 3s ease-out infinite;
+}
+@keyframes blob {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%      { transform: translate(60px, -40px) scale(1.15); }
+  66%      { transform: translate(-40px, 50px) scale(0.9); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.15; transform: scale(1); }
+  50%      { opacity: 1;    transform: scale(1.7); }
+}
+
+@keyframes rise {
+  0%   { transform: translateY(0);      opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { transform: translateY(-110vh); opacity: 0; }
+}
+
+.blob-anim    { animation: blob 20s ease-in-out infinite; }
+.twinkle-anim { animation: twinkle 3s ease-in-out infinite; }
+.rise-anim    { animation: rise 15s linear infinite; }
+
+/* harakatni kamaytirishni so'ragan foydalanuvchilar uchun */
+@media (prefers-reduced-motion: reduce) {
+  .blob-anim, .twinkle-anim, .rise-anim, .float-anim, .ripple-anim {
+    animation: none;
+  }
+}
