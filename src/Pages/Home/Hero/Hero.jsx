@@ -84,7 +84,9 @@ function Hero() {
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4 lg:justify-start">
+              <a href="https://github.com/sardorbektursunaliyev1209-pixel?tab=repositories">
               <FaGithub size={42} className={iconStyle} />
+              </a>
               <FaYoutube size={42} className={iconStyle} />
               <FaTelegram size={42} className={iconStyle} />
               <FaInstagram size={42} className={iconStyle} />
